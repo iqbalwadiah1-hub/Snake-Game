@@ -3,19 +3,8 @@
    DSA Project | Data Structure: QUEUE
    
    This file contains all game logic.
-   The C++ version of this logic is in: snake_logic.cpp
 ============================================================ */
 
-
-// ============================================================
-//  QUEUE CLASS (built from scratch — no library)
-//
-//  The snake body IS the queue:
-//    Front = HEAD of snake  (enqueue here on each move)
-//    Rear  = TAIL of snake  (dequeue here on each move)
-//
-//  C++ equivalent: class Queue with Node* front, Node* rear
-// ============================================================
 class Queue {
   constructor() {
     this.data = [];               // internal storage (array as queue)
