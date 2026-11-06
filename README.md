@@ -14,11 +14,6 @@ Just double-click `index.html` — it opens in any browser.
 - Keyboard: Arrow Keys
 - Mobile: D-Pad buttons or swipe on screen
 
-## How to Run C++ Logic (Terminal)
-```
-g++ snake_logic.cpp -o snake
-./snake
-```
 
 ## DSA — Queue Usage
 - **ENQUEUE** → new head added to front every move
