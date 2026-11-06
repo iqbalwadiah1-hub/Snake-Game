@@ -4,7 +4,7 @@
 
 | File | Purpose |
 |------|---------|
-| `index.html` | HTML structure — open this in browser to play |
+| `index.html` | HTML structure - open this in browser to play |
 | `styles.css` | All styling (linked to index.html) |
 | `game.js` | All game logic in JavaScript (linked to index.html) |
 | `snake_logic.cpp` | Same logic written in C++ to show DSA implementation |
