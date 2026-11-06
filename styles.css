@@ -1,0 +1,182 @@
+/* ============================================================
+   SNAKE GAME - Styles
+   DSA Project | Queue Data Structure
+============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green:     #00ff88;
+  --green-dim: #00cc66;
+  --bg:        #080808;
+  --surface:   #0d0d0d;
+  --border:    #1a1a1a;
+  --muted:     #444;
+}
+
+html, body {
+  background: var(--bg);
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+  touch-action: manipulation;
+}
+
+/* ── App Layout ── */
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px 40px;
+  gap: 12px;
+}
+
+/* ── Title ── */
+#title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(22px, 7vw, 36px);
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: var(--green);
+  text-align: center;
+}
+
+/* ── HUD (Score / Length / Best) ── */
+#hud {
+  display: flex;
+  gap: 12px;
+}
+
+.hud-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 16px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.hud-label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 2px;
+}
+
+.hud-val {
+  font-size: clamp(18px, 5vw, 24px);
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* ── Game Canvas ── */
+#canvas-wrap {
+  position: relative;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #050505;
+}
+
+canvas {
+  display: block;
+}
+
+/* ── Start / Game Over Overlay ── */
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  border-radius: 12px;
+  gap: 14px;
+}
+
+#overlay h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(14px, 4vw, 20px);
+  color: var(--green);
+  letter-spacing: 3px;
+}
+
+#overlay p {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+#ol-score {
+  font-size: clamp(34px, 10vw, 54px);
+  color: #fff;
+  font-weight: 700;
+  display: none;
+}
+
+/* ── Start / Play Again Button ── */
+#btn {
+  font-family: 'Share Tech Mono', monospace;
+  background: var(--green);
+  color: #000;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.1s;
+}
+
+#btn:active {
+  transform: scale(0.96);
+}
+
+/* ── D-Pad Controls ── */
+#dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.dp-row {
+  display: flex;
+  gap: 4px;
+}
+
+.dp-btn {
+  width: clamp(54px, 15vw, 68px);
+  height: clamp(54px, 15vw, 68px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--green);
+  font-size: clamp(22px, 5vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.1s, transform 0.1s;
+}
+
+.dp-btn:active {
+  background: #0a2a18;
+  transform: scale(0.92);
+}
+
+.dp-spacer {
+  width: clamp(54px, 15vw, 68px);
+}

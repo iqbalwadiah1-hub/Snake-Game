@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>Snake Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="app">
+
+  <div id="title">SNAKE GAME</div>
+
+  <div id="hud">
+    <div class="hud-box"><div class="hud-label">SCORE</div><div class="hud-val" id="score">0</div></div>
+    <div class="hud-box"><div class="hud-label">LENGTH</div><div class="hud-val" id="length">1</div></div>
+    <div class="hud-box"><div class="hud-label">BEST</div><div class="hud-val" id="best">0</div></div>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="c"></canvas>
+    <div id="overlay">
+      <h2 id="ol-title">SNAKE GAME</h2>
+      <p id="ol-sub">Arrow keys | D-pad below | Swipe on screen</p>
+      <div id="ol-score"></div>
+      <button id="btn" onclick="startGame()">START GAME</button>
+    </div>
+  </div>
+
+  <div id="dpad">
+    <div class="dp-row">
+      <div class="dp-spacer"></div>
+      <button class="dp-btn" id="dbtn-up">&#8593;</button>
+      <div class="dp-spacer"></div>
+    </div>
+    <div class="dp-row">
+      <button class="dp-btn" id="dbtn-left">&#8592;</button>
+      <button class="dp-btn" id="dbtn-down">&#8595;</button>
+      <button class="dp-btn" id="dbtn-right">&#8594;</button>
+    </div>
+  </div>
+
+</div>
+<script src="game.js"></script>
+</body>
+</html>
